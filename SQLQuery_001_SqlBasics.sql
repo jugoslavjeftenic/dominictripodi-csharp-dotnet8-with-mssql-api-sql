@@ -31,6 +31,7 @@ SELECT
     [VideoCard]
 FROM TutorialAppSchema.Computer
 ORDER BY HasWiFi, ReleaseDate DESC
+GO
 
 --SET IDENTITY_INSERT TutorialAppSchema.Computer ON
 --SET IDENTITY_INSERT TutorialAppSchema.Computer OFF
@@ -52,12 +53,16 @@ INSERT INTO TutorialAppSchema.Computer(
     1000,
     'Sample-Videocard'
 )
+GO
 
 DELETE FROM TutorialAppSchema.Computer WHERE ComputerId = 1
+GO
 
 UPDATE TutorialAppSchema.Computer SET CPUCores = 4 WHERE ComputerId = 2
+GO
 
 UPDATE TutorialAppSchema.Computer SET CPUCores = 2 WHERE ReleaseDate < '2017-01-01'
+GO
+
 UPDATE TutorialAppSchema.Computer SET CPUCores = NULL WHERE ReleaseDate >= '2017-01-01'
-
-
+GO
